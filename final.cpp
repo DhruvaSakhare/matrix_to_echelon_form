@@ -57,21 +57,21 @@ float arr[3][3];
 
     for(int u=0;u<3;u++){
 
-        temp=arr[u][u];
+        temp=arr[u][u];//defining the diagonal elements
 
         for(int v=0;v<3;v++){
             if(arr[u][v]!=0){
 
-            arr[u][v]=arr[u][v]/temp;}
+            arr[u][v]=arr[u][v]/temp;}//converting diaonal elements to 1 by division
         }
 
         for(int j=(u+1);j<3;j++){
-            temp2=arr[j][u];
+            temp2=arr[j][u];//defining the leading elements below the pivot element
          
             if(temp2!=0){
                 for(int y=0;y<3;y++){
                     
-                    arr[j][y]-=temp2*arr[u][y];
+                    arr[j][y]-=temp2*arr[u][y];//converting elements below diagonal elements to zero by substraction
                     
                 }
             }
@@ -83,7 +83,7 @@ float arr[3][3];
  
 //  this is the code for rank of 3*3 
  
-    int z=0;
+    int z=0;//Number of zero rows
   for(int i=0;i<3;i++){
     int c=0;
     for(int j=0;j<3;j++){
@@ -259,7 +259,7 @@ cout<<"\n";
     if(ra==rab && rab==3)
     {
         cout<<" System is consistent."<<endl;
-        cout<<" System of quations has unique solution "<<endl;
+        cout<<" System of equations has unique solution "<<endl;
 
     }
 
